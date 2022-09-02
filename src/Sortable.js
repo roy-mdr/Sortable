@@ -1217,6 +1217,8 @@ Sortable.prototype = /** @lends Sortable.prototype */ {
 				_dispatchEvent({
 					rootEl: el,
 					name: 'dragIn',
+					from: rootEl, // Is overwritten after this... so...
+					fromSortable: rootEl[expando],
 					originalEvent: evt
 				});
 			}
